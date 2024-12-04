@@ -30,6 +30,7 @@ resource "azurerm_public_ip" "devops-public-ip" {
   location            = azurerm_resource_group.devops_resources.location
   resource_group_name = azurerm_resource_group.devops_resources.name
   allocation_method   = "Dynamic"
+  sku                 = "Basic"
 }
 
 
