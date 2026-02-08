@@ -38,7 +38,9 @@ resource "azurerm_linux_virtual_machine" "devops-vm" {
  provisioner "remote-exec" {
    inline = [
      "sudo apt-get update -y",
+     "sudo sleep 10",
      "sudo apt-get install apache2 -y",
+     "sudo sleep 10",
      "sudo cp -rf /tmp/index.html /var/www/html/index.html",
      "sudo systemctl start apache2",
      "sudo systemctl enable apache2",
